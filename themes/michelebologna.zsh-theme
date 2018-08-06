@@ -23,13 +23,13 @@
 # * '=' if local repo is equal to remote repo (in sync)
 # * '<>' if local repo is diverged
 
-local green="%{$fg_bold[green]%}"
-local red="%{$fg_bold[red]%}"
-local cyan="%{$fg_bold[cyan]%}"
-local yellow="%{$fg_bold[yellow]%}"
-local blue="%{$fg_bold[blue]%}"
-local magenta="%{$fg_bold[magenta]%}"
-local white="%{$fg_bold[white]%}"
+local green="%{$fg[green]%}"
+local red="%{$fg[red]%}"
+local cyan="%{$fg[cyan]%}"
+local yellow="%{$fg[yellow]%}"
+local blue="%{$fg[blue]%}"
+local magenta="%{$fg[magenta]%}"
+local white="%{$fg[white]%}"
 local reset="%{$reset_color%}"
 
 local -a color_array
