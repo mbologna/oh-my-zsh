@@ -604,8 +604,7 @@ ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="<"
 ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="<>"
 
 PROMPT='$username_output$hostname_output:$current_dir_output%1(j. [$jobs_bg].)'
-GIT_PROMPT='$(out=$(git_prompt_info)$(git_prompt_status)$(git_remote_status);if [[ -n $out ]]; then printf %s " $reset($green$out$reset)";fi)'
-PROMPT+="$GIT_PROMPT"
+PROMPT+='$(__git_ps1)'
 [[ -n $SSH_TTY ]] && PROMPT="$PROMPT ${red}(ssh)$reset"
 PROMPT+=" $last_command_output%#$reset "
 RPROMPT=''
