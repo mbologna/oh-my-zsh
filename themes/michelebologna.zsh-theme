@@ -51,6 +51,7 @@ local current_dir="%~"
 
 local username_output="%(!..$username_normal_color$username_command$reset@)"
 local hostname_output="$hostname_color$hostname_command$reset"
+
 local current_dir_output="$current_dir_color$current_dir$reset"
 local jobs_bg="${red}fg: %j$reset"
 local last_command_output="%(?.%(!.$red.$green).$yellow)"
@@ -59,14 +60,14 @@ ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY=""
 ZSH_THEME_GIT_PROMPT_CLEAN=""
-ZSH_THEME_GIT_PROMPT_UNTRACKED="$blue%%"
-ZSH_THEME_GIT_PROMPT_MODIFIED="$red*"
-ZSH_THEME_GIT_PROMPT_ADDED="$green+"
-ZSH_THEME_GIT_PROMPT_STASHED="$blue$"
-ZSH_THEME_GIT_PROMPT_EQUAL_REMOTE="$green="
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%%"
+ZSH_THEME_GIT_PROMPT_MODIFIED="*"
+ZSH_THEME_GIT_PROMPT_ADDED="+"
+ZSH_THEME_GIT_PROMPT_STASHED="$"
+ZSH_THEME_GIT_PROMPT_EQUAL_REMOTE="="
 ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE=">"
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="<"
-ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="$red<>"
+ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="<>"
 
 PROMPT='$username_output$hostname_output:$current_dir_output%1(j. [$jobs_bg].)'
 GIT_PROMPT='$(out=$(git_prompt_info)$(git_prompt_status)$(git_remote_status);if [[ -n $out ]]; then printf %s " $white($green$out$white)$reset";fi)'
