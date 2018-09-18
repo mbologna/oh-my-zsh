@@ -588,7 +588,7 @@ local hostname_output="$hostname_color$hostname_command$reset"
 
 local current_dir_output="$current_dir_color$current_dir$reset"
 local jobs_bg="${red}fg: %j$reset"
-local last_command_output="%(?.%(!.$red.$green).$yellow)"
+local last_command_output="%(?.$green.$red)"
 
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
