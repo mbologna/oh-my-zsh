@@ -603,8 +603,12 @@ ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE=">"
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="<"
 ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="<>"
 
-PROMPT='$username_output$hostname_output:$current_dir_output%1(j. [$jobs_bg].)'
+NEWLINE=$'\n'
+PROMPT='$username_output$hostname_output:$current_dir_output'
+PROMPT+='${NEWLINE}'
+PROMPT+='%1(j. [$jobs_bg].)'
 PROMPT+='$(__git_ps1)'
-[[ -n $SSH_TTY ]] && PROMPT="$PROMPT ${red}(ssh)$reset"
+PROMPT+='$(kube_ps1)'
+[[ -n $SSH_TTY ]] && PROMPT+="$PROMPT ${red}(ssh)$reset"
 PROMPT+=" $last_command_output%#$reset "
 RPROMPT=''
